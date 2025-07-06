@@ -1,36 +1,23 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/bin/bash
 
-# === Auto-detect project directory ===
-PROJECT_DIR="$(dirname "$0")"
-SCRIPT_DIR="$PROJECT_DIR/scripts"
+ACTION="$1"
 
-INSTALL_SCRIPT="$SCRIPT_DIR/install.sh"
-REMOVE_SCRIPT="$SCRIPT_DIR/remove.sh"
-START_SCRIPT="$SCRIPT_DIR/start.sh"
-
-# === Command router ===
-case "$1" in
+case "$ACTION" in
     install)
-        bash "$INSTALL_SCRIPT"
+        bash scripts/install.sh
         ;;
     remove)
-        bash "$REMOVE_SCRIPT"
+        bash scripts/remove.sh
         ;;
     start)
-        bash "$START_SCRIPT"
+        bash scripts/start.sh
         ;;
-    help|--help|-h|"")
-        echo "Usage: ./terbian-main.sh <command>"
-        echo ""
-        echo "Available commands:"
-        echo "  install     Install Debian from xroot.tar.gz"
-        echo "  remove      Remove installed Debian rootfs"
-        echo "  start       Launch Debian environment"
-        echo "  help        Show this message"
+    help|"")
+        echo "Usage: ./terbian-main.sh [install | remove | start | help]"
         ;;
     *)
-        echo "[Error] Unknown command: $1"
-        echo "Run './terbian-main.sh help' for a list of available commands."
+        echo "Unknown command: $ACTION"
+        echo "Usage: ./terbian-main.sh [install | remove | start | help]"
         exit 1
         ;;
 esac
