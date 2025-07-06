@@ -2,7 +2,7 @@
 
 set -e
 
-PROJECT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DISTRO_DIR="$PROJECT_DIR/distro"
 ARCHIVE="$DISTRO_DIR/xroot.tar.gz"
 INSTALL_DIR="$PROJECT_DIR/installed-xroot/xroot"
