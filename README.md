@@ -4,5 +4,5 @@
 ```
 git clone https://github.com/Gift4608/terbian-main.git && 
 cd terbian-main && 
-chmod +x *.sh scripts/*.sh
+chmod +x *.sh scripts/*.sh bin/*.sh
 ```
