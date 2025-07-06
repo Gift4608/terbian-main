@@ -14,4 +14,4 @@ if [ ! -x "$PROOT_BIN" ]; then
     exit 1
 fi
 
-exec "$PROOT_BIN" -R "$INSTALL_DIR" /bin/bash
+exec "$PROOT_BIN" -r "$INSTALL_DIR" /usr/bin/bash
