@@ -19,6 +19,7 @@ else
 fi
 
 echo "Extracting xroot.tar.gz..."
+mkdir -p "$INSTALL_DIR"
 rm -rf "$INSTALL_DIR"/*
 tar -xf "$ARCHIVE" -C "$INSTALL_DIR"
 
