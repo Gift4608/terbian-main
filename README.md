@@ -6,5 +6,5 @@ cd &&
 git clone https://github.com/Gift4608/terbian-main.git && 
 cd terbian-main && 
 chmod +x *.sh scripts/*.sh bin/* && 
-./terbian-main.sh help
+clear && ./terbian-main.sh help
 ```
